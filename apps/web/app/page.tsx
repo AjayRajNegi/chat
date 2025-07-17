@@ -4,7 +4,7 @@ import { useSocket } from "../context/SocketProvider";
 import classes from "./page.module.css";
 
 export default function Page() {
-  const { sendMessage } = useSocket();
+  const { sendMessage, messages } = useSocket();
   const [message, setMessage] = useState("");
 
   return (
@@ -22,11 +22,11 @@ export default function Page() {
           Send
         </button>
       </div>
-      {/* <div>
+      <div>
         {messages.map((e) => (
           <li>{e}</li>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
